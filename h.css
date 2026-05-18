@@ -1932,3 +1932,29 @@ body.light-mode .sidebar-widget {
 .dark-mode .author-bio {
     background: #1e293b;
 }
+
+/* Mobile menu styles */
+.mobile-menu-btn {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block !important;
+    }
+    
+    .sidebar-col {
+      position: fixed;
+      top: 0;
+      left: -280px;
+      width: 280px;
+      height: 100%;
+      z-index: 1000;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+    }
+    
+    .sidebar-col.mobile-open {
+      left: 0;
+    }
+}
