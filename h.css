@@ -1,0 +1,1934 @@
+/* ========================================
+   h.css v2.0 - Universal CSS Framework
+   Complete styling for Blogger templates
+   Works with h.js - Dark mode, responsive, modern
+   ======================================== */
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f8fafc;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+    color: inherit;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* ========================================
+     LISTS
+     ======================================== */
+
+ul,
+ol {
+    margin: 0 0 1rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* ========================================
+     IMAGES & MEDIA
+     ======================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+/* ========================================
+     TABLES
+     ======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #f1f5f9;
+    font-weight: 600;
+}
+
+/* ========================================
+     FORMS & BUTTONS
+     ======================================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+button,
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover,
+.button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+button:active,
+.button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+     LAYOUT SYSTEM
+     ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.col-main {
+    flex: 2;
+    min-width: 250px;
+}
+
+.col-sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Grid system */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* ========================================
+     COMPONENTS - CARDS
+     ======================================== */
+
+.card,
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-title a {
+    color: #0f172a;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.post-meta i {
+    margin-right: 0.25rem;
+    width: 16px;
+}
+
+.post-body {
+    line-height: 1.7;
+}
+
+.post-body img {
+    margin: 1rem 0;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* ========================================
+     COMPONENTS - SIDEBAR WIDGETS
+     ======================================== */
+
+.sidebar-widget {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease;
+}
+
+.sidebar-widget:hover {
+    transform: translateY(-2px);
+}
+
+.widget-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #3b82f6;
+}
+
+/* ========================================
+     COMPONENTS - HEADER
+     ======================================== */
+
+.blog-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.blog-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.blog-title a {
+    color: white;
+}
+
+.blog-description {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+/* ========================================
+     COMPONENTS - FOOTER
+     ======================================== */
+
+.footer {
+    text-align: center;
+    padding: 2.5rem;
+    background: #0f172a;
+    color: white;
+    margin-top: 60px;
+}
+
+.footer a {
+    color: #60a5fa;
+}
+
+/* ========================================
+     COMPONENTS - PAGINATION
+     ======================================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+.pagination .current {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* ========================================
+     COMPONENTS - ALERTS & NOTIFICATIONS
+     ======================================== */
+
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-info {
+    background: #dbeafe;
+    color: #1e40af;
+    border-left: 4px solid #3b82f6;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+}
+
+.alert-warning {
+    background: #fed7aa;
+    color: #92400e;
+    border-left: 4px solid #f59e0b;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+/* Toast notifications (used by h.js) */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    z-index: 10000;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ========================================
+     DARK MODE STYLES
+     ======================================== */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .card,
+body.dark-mode .post-card,
+body.dark-mode .sidebar-widget {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .post-title a {
+    color: #38bdf8;
+}
+
+body.dark-mode a {
+    color: #38bdf8;
+}
+
+body.dark-mode a:hover {
+    color: #7dd3fc;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #0f172a;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    border-color: #38bdf8;
+}
+
+body.dark-mode button,
+body.dark-mode .button {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .button:hover {
+    background: #7dd3fc;
+}
+
+body.dark-mode .blog-header {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+}
+
+body.dark-mode .footer {
+    background: #020617;
+}
+
+body.dark-mode .pagination a {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .alert-info {
+    background: #1e293b;
+    color: #38bdf8;
+}
+
+/* ========================================
+     LIGHT MODE STYLES
+     ======================================== */
+
+body.light-mode {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-mode .card,
+body.light-mode .post-card,
+body.light-mode .sidebar-widget {
+    background: white;
+    border-color: #e2e8f0;
+}
+
+/* ========================================
+     RESPONSIVE DESIGN
+     ======================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-header {
+        padding: 40px 0;
+    }
+
+    .post-card {
+        padding: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .blog-title {
+        font-size: 1.75rem;
+    }
+
+    .post-meta {
+        font-size: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .sidebar-widget {
+        padding: 1rem;
+    }
+
+    button,
+    .button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* ========================================
+     UTILITY CLASSES
+     ======================================== */
+
+/* Text alignment */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Text colors */
+.text-primary {
+    color: #3b82f6;
+}
+
+.text-success {
+    color: #10b981;
+}
+
+.text-warning {
+    color: #f59e0b;
+}
+
+.text-error {
+    color: #ef4444;
+}
+
+.text-muted {
+    color: #64748b;
+}
+
+.text-white {
+    color: white;
+}
+
+/* Background colors */
+.bg-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.bg-success {
+    background: #10b981;
+    color: white;
+}
+
+.bg-warning {
+    background: #f59e0b;
+    color: white;
+}
+
+.bg-error {
+    background: #ef4444;
+    color: white;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-dark {
+    background: #0f172a;
+    color: white;
+}
+
+.bg-light {
+    background: #f1f5f9;
+}
+
+/* Spacing - Margin */
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: 0.25rem;
+}
+
+.m-2 {
+    margin: 0.5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.m-4 {
+    margin: 1.5rem;
+}
+
+.m-5 {
+    margin: 2rem;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 2rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 2rem;
+}
+
+.ml-0 {
+    margin-left: 0;
+}
+
+.ml-1 {
+    margin-left: 0.25rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.ml-3 {
+    margin-left: 1rem;
+}
+
+.mr-0 {
+    margin-right: 0;
+}
+
+.mr-1 {
+    margin-right: 0.25rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.mr-3 {
+    margin-right: 1rem;
+}
+
+/* Spacing - Padding */
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 2rem;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pt-1 {
+    padding-top: 0.25rem;
+}
+
+.pt-2 {
+    padding-top: 0.5rem;
+}
+
+.pt-3 {
+    padding-top: 1rem;
+}
+
+.pt-4 {
+    padding-top: 1.5rem;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pb-1 {
+    padding-bottom: 0.25rem;
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem;
+}
+
+.pb-3 {
+    padding-bottom: 1rem;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 1rem;
+}
+
+.gap-4 {
+    gap: 1.5rem;
+}
+
+/* Display */
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Borders */
+.border-none {
+    border: none;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+/* Shadows */
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Width */
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+/* ========================================
+     ANIMATIONS
+     ======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+.pulse:hover {
+    animation: pulse 0.3s ease;
+}
+
+/* ========================================
+     PRINT STYLES
+     ======================================== */
+
+@media print {
+
+    .blog-header,
+    .sidebar-col,
+    .footer,
+    .back-to-top,
+    .reading-progress {
+        display: none;
+    }
+
+    body,
+    .post-card {
+        background: white;
+        color: black;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* ========================================
+   COMPONENTS LIBRARY - Add to h.css
+   ======================================== */
+
+/* ========================================
+   1. NAVIGATION BAR (Navbar)
+   ======================================== */
+
+.navbar {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.navbar-logo a {
+    color: #0f172a;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    color: #334155;
+    padding: 1rem 0;
+    display: block;
+}
+
+.navbar-menu li a:hover {
+    color: #3b82f6;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li a {
+        padding: 0.75rem 0;
+        border-top: 1px solid #e2e8f0;
+    }
+}
+
+/* Dark mode navbar */
+.dark-mode .navbar {
+    background: #1e293b;
+}
+
+.dark-mode .navbar-logo a {
+    color: white;
+}
+
+.dark-mode .navbar-menu li a {
+    color: #cbd5e1;
+}
+
+/* ========================================
+     2. BREADCRUMBS
+     ======================================== */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb li {
+    display: inline;
+    margin: 0;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: "/";
+    margin: 0 0.5rem;
+    color: #64748b;
+}
+
+.breadcrumb a {
+    color: #3b82f6;
+}
+
+.breadcrumb .current {
+    color: #64748b;
+}
+
+/* ========================================
+     3. TABS
+     ======================================== */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.tab-btn:hover {
+    color: #3b82f6;
+}
+
+.tab-btn.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ========================================
+     4. ACCORDION
+     ======================================== */
+
+.accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: white;
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background: #f8fafc;
+}
+
+.accordion-header:after {
+    content: "▼";
+    font-size: 0.75rem;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-header:after {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Dark mode accordion */
+.dark-mode .accordion-header {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode .accordion-content {
+    background: #0f172a;
+    border-top-color: #334155;
+}
+
+/* ========================================
+     5. MODAL / POPUP
+     ======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.dark-mode .modal-content {
+    background: #1e293b;
+}
+
+/* ========================================
+     6. BADGES & TAGS
+     ======================================== */
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.badge-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.badge-success {
+    background: #10b981;
+    color: white;
+}
+
+.badge-warning {
+    background: #f59e0b;
+    color: white;
+}
+
+.badge-error {
+    background: #ef4444;
+    color: white;
+}
+
+.badge-info {
+    background: #06b6d4;
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    background: #f1f5f9;
+    color: #334155;
+    text-decoration: none;
+    margin: 0.25rem;
+}
+
+.tag:hover {
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+}
+
+/* ========================================
+     7. PROGRESS BAR
+     ======================================== */
+
+.progress {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 9999px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ========================================
+     8. TOOLTIP
+     ======================================== */
+
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 0.75rem;
+    background: #0f172a;
+    color: white;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    margin-bottom: 8px;
+    z-index: 1000;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+     9. DROPDOWN MENU
+     ======================================== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #334155;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f5f9;
+}
+
+.dark-mode .dropdown-menu {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.dark-mode .dropdown-menu a {
+    color: #cbd5e1;
+}
+
+/* ========================================
+     10. SLIDER / CAROUSEL
+     ======================================== */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background: white;
+}
+
+/* ========================================
+     11. LOADING SPINNER
+     ======================================== */
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ========================================
+     12. RATING STARS
+     ======================================== */
+
+.rating {
+    display: inline-flex;
+    gap: 4px;
+    direction: ltr;
+}
+
+.rating-star {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #cbd5e1;
+    transition: color 0.1s;
+}
+
+.rating-star.active,
+.rating-star:hover,
+.rating-star:hover~.rating-star {
+    color: #f59e0b;
+}
+
+/* ========================================
+     13. AVATAR / PROFILE IMAGE
+     ======================================== */
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar-lg {
+    width: 64px;
+    height: 64px;
+}
+
+.avatar-xl {
+    width: 96px;
+    height: 96px;
+}
+
+/* ========================================
+     14. SOCIAL ICONS
+     ======================================== */
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #334155;
+    transition: all 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.social-icon.twitter:hover {
+    background: #1DA1F2;
+    color: white;
+}
+
+.social-icon.facebook:hover {
+    background: #4267B2;
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    background: #E4405F;
+    color: white;
+}
+
+.social-icon.youtube:hover {
+    background: #FF0000;
+    color: white;
+}
+
+.social-icon.github:hover {
+    background: #333;
+    color: white;
+}
+
+.social-icon.linkedin:hover {
+    background: #0077B5;
+    color: white;
+}
+
+/* ========================================
+     15. CALL TO ACTION (CTA)
+     ======================================== */
+
+.cta {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.cta h2,
+.cta h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.cta .button {
+    background: white;
+    color: #3b82f6;
+}
+
+.cta .button:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================
+     16. PRICING CARD
+     ======================================== */
+
+.pricing-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.featured {
+    border: 2px solid #3b82f6;
+    position: relative;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.pricing-price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.pricing-price span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.pricing-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dark-mode .pricing-card {
+    background: #1e293b;
+}
+
+/* ========================================
+     17. TESTIMONIAL
+     ======================================== */
+
+.testimonial {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* ========================================
+     18. STATS / COUNTER
+     ======================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+/* ========================================
+     19. FEATURE GRID
+     ======================================== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+     20. AUTHOR BIO BOX
+     ======================================== */
+
+.author-bio {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.author-bio img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-bio h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.author-bio p {
+    margin: 0;
+}
+
+.dark-mode .author-bio {
+    background: #1e293b;
+}
