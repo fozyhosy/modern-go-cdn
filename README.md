@@ -4,7 +4,8 @@ Create Modern Template Blogger Using "H" Framework
 # How to Use h.js in Your Template
 Add this to your template's <head> or before </body>:
 ```xml
-<script src='https://your-cdn-or-local/h.js'></script>
+<!-- JS from CDN -->
+<script src='https://cdn.jsdelivr.net/gh/fozyhosy/modern-go-cdn@latest/h.js'></script>
 Or paste the entire JavaScript directly before </body>:
 
 ```xml
@@ -164,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 # How to Use h.css
 ## Option 1: Link as external file
 ```html
-<link href='https://your-cdn.com/h.css' rel='stylesheet'/>
+<link href='https://cdn.jsdelivr.net/gh/fozyhosy/modern-go-cdn@latest/h.css' rel='stylesheet'/>
 ```
 ## Option 2: Paste directly into your template
 Add the entire CSS inside your <b:skin> tag:
